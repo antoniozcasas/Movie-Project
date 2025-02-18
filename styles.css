@@ -78,6 +78,7 @@ img {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-right: 16px; /* Add space between toggle theme and sort select */
 }
 
 body.dark-mode #themeToggle .fa-toggle-on {
@@ -93,8 +94,7 @@ body:not(.dark-mode) #themeToggle .fa-toggle-off {
   flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
-  transition: opacity 0.5s;
-}
+ }
 
 .movie__img--wrapper {
   flex: 1 1 calc(33.333% - 16px);
@@ -120,6 +120,10 @@ body.dark-mode .movie__details {
 .movie__type {
   color: #7342d6;
   font-weight: bold;
+}
+
+.movie__release {
+  margin-top: 10px;
 }
 
 .movie__img {
@@ -180,6 +184,11 @@ body.dark-mode .movie__details {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   width: calc(33.333% - 16px);
   margin-bottom: 16px;
+  transition: transform 0.5s;
+}
+
+.movie__wrapper:hover {
+  transform: scale(1.05);
 }
 
 .footer {
