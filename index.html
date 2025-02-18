@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Finder</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script
+      src="https://kit.fontawesome.com/6db8751ba9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body id="movies__body">
+    <header>
+      <nav class="nav__container">
+        <h1 class="website__title">Movie Finder</h1>
+        <div
+          class="nav__items"
+          style="flex-grow: 1; display: flex; justify-content: center"
+        >
+          <input
+            type="text"
+            id="searchBar"
+            placeholder="Search for movies..."
+            onkeypress="searchMovies(event)"
+            style="width: 50%"
+          />
+        </div>
+        <button id="themeToggle" onclick="toggleTheme()">
+          <i class="fa-solid fa-toggle-on"></i> Toggle Theme
+        </button>
+      </nav>
+    </header>
+
+    <main id="movies__main">
+      <section class="movies__section">
+        <div class="container">
+          <div id="loading" class="loading">
+            <i class="fa-solid fa-spinner"></i>
+          </div>
+          <div class="movies">
+            <div class="movie__wrapper">
+              <figure class="movie__img--wrapper">
+                <img class="movie__img" src="" alt="" />
+              </figure>
+              <div class="movie__details">
+                <div class="movie__title"></div>
+                <div class="movie__release"></div>
+                <div class="movie__type"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Movie Finder. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
